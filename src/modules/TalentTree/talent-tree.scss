@@ -1,0 +1,156 @@
+$defaultFontColor: #f6f2ec;
+$themeColor: #405a75;
+$themeColorLight: #6dabea;
+
+.talent-tree {
+	width: 1000px;
+	min-height: 350px;
+	background: url("./talent-calc-bg.png");
+	background-size: cover;
+	border: 1px solid #161618;
+	color: $defaultFontColor;
+	padding: 24px;
+	
+	.tt__heading {
+		background-color: #1a1b1d;
+		color: $defaultFontColor;
+		display: block;
+		padding: 12px 0px;
+		font-size: 24px;
+		line-height: 24px;
+        text-align: center;
+        margin: 0;
+	}
+
+	.tt__row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: stretch;
+		min-height: 300px;
+		margin-top: 24px;
+	}
+
+	.tt__branch {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: stretch;
+		position: relative;
+		z-index: 1;
+	}
+
+	.tt__leaf {
+		align-items:center;
+		display:flex;
+		flex-grow:1;
+		position: relative;
+		
+		&::after {
+			content:'';
+			background: #303133;
+			border: 1px solid #414142;
+			border-left: 0px;
+			border-right: 0px;
+			position: absolute;
+			right: -6px;
+			left: 6px;
+			height: 14px;
+			z-index: -1;
+		}
+	}
+	
+	.tt__leaf--hide-path {
+		&::after {
+			display: none;
+		}
+	}
+
+	.tt__col {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.tt__col--stretch {
+		align-items: stretch;
+	}
+	
+	.tt__col--quad-size {
+		flex-grow: 4
+	}
+
+	.tt__point-container {
+		background-color: #131314;
+		border: 1px solid #1b1d1d;
+		padding: 18px 24px;
+	}
+	
+	.tt__text {
+		display: block;
+		font-size: 22px;
+		line-height: 28px;
+		text-align: center;
+	}
+	
+	.tt__text--theme-color {
+		color: $themeColor;
+	}
+	.tt__text--left-align {
+		text-align: left;
+	}
+	.tt__text--small {
+		font-size: 16px;
+		line-height: 16px;
+	}
+}
+
+
+.tt-talent {
+	height: 52px;
+	width: 52px;
+	display: block;
+	background: linear-gradient(#4e4e4e 49%, #3a3a3a 50%, #4e4e4e 95%);
+	border: 1px solid black;
+	padding: 4px;
+}
+
+.tt-talent__button {
+	width: 100%;
+	height: 100%;
+    border: 1px solid black;
+    outline: none;
+}
+
+.tt-talent--active {
+	background: linear-gradient($themeColorLight 49%, #3a3a3a 50%, $themeColorLight 95%);
+	box-shadow: #7d7d7d 0px 0px 8px;
+}
+
+.tt-talent__button--stack {
+	background: url("./talent-icons-sprite.png") 0 0;
+}
+.tt-talent__button--snack {
+	background: url("./talent-icons-sprite.png") -50px 0;
+}
+.tt-talent__button--cake {
+	background: url("./talent-icons-sprite.png") -100px 0;
+}
+.tt-talent__button--crown {
+	background: url("./talent-icons-sprite.png") -150px 0;
+}
+.tt-talent__button--boat {
+	background: url("./talent-icons-sprite.png") -200px 0;
+}
+.tt-talent__button--diver {
+	background: url("./talent-icons-sprite.png") -250px 0;
+}
+.tt-talent__button--lightning {
+	background: url("./talent-icons-sprite.png") -300px 0;
+}
+.tt-talent__button--skull {
+	background: url("./talent-icons-sprite.png") -350px 0;
+}
