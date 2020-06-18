@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "76a0ffec1cef6d32cb840a1cbd6bb47f",
+    "revision": "135bc761c56d16b9c1a0aaa439d08967",
     "url": "/tsl-talent-calc/index.html"
   },
   {
-    "revision": "a098c0a56cdaf9118683",
+    "revision": "1b0929940daf7e7b9553",
     "url": "/tsl-talent-calc/static/css/main.64507339.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tsl-talent-calc/static/js/2.85544654.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a098c0a56cdaf9118683",
-    "url": "/tsl-talent-calc/static/js/main.ade1d209.chunk.js"
+    "revision": "1b0929940daf7e7b9553",
+    "url": "/tsl-talent-calc/static/js/main.de061aa9.chunk.js"
   },
   {
     "revision": "f19843fc20ab4ec84e24",
