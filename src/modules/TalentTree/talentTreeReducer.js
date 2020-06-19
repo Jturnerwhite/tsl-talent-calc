@@ -15,8 +15,6 @@ export default function talentTreeReducer(state = initialState, action) {
         case actions.GET_TALENT_TREE_FAILURE:
             return { ...state, loading: false, errors: true };
         case actions.UPDATE_TALENT_TREE:
-            console.log(state);
-            console.log(action.payload);
             return { ...state, talentTree:action.payload };
         default:
             return state;

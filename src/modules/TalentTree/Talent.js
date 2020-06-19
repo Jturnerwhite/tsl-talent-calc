@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './talent.scss';
+
 export const Talent = props => {
     let talent = props.talentData;
     const toggleTalent = props.toggleTalent;

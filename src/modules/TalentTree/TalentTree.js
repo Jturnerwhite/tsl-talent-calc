@@ -32,6 +32,9 @@ export class TalentBranch extends Component {
                 let classes = "tt__leaf";
                 if (index === branchData.talents.length - 1)
                     classes += " tt__leaf--hide-path";
+                if (talent.assigned)
+                    classes += " tt__leaf--active";
+
     
                 return (
                     <div key={index} className={classes}>
@@ -42,8 +45,8 @@ export class TalentBranch extends Component {
     
             return (
                 <div className="tt__branch">
-                    <div className="tt__leaf tt__leaf--hide-path">
-                        <label className="tt__text tt__text--small tt__text--left-align">{branchData.id}</label>
+                    <div className="tt__leaf tt__branch-name">
+                        <label className="tt__text">{branchData.id}</label>
                     </div>
                     {branchContents}
                 </div>
@@ -80,14 +83,14 @@ export class TalentTree extends Component {
 
         return (
             <div className="talent-tree">
-                <h1 className="tt__heading">TitanStar Legends - Talent Display</h1>
+                <h1 className="tt__heading">TitanStar Legends - Rune Mastery Loadout Talent Calculator 9000</h1>
                 <div className="tt__row">
-                    <div className="tt__col tt__col--quad-size tt__col--stretch">
+                    <div className="tt__col tt__branch-container">
                         {talentBranches}
                     </div>
                     <div className="tt__col">
                         <div className="tt__point-container">
-                            <label className="tt__text">{points} / {pointsMax}</label>
+                            <label className="tt__text tt__text">{points} / {pointsMax}</label>
                             <label className="tt__text tt__text--theme-color">Points Spent</label>
                         </div>
                     </div>

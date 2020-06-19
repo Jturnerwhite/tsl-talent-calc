@@ -1,0 +1,86 @@
+$defaultFontColor: #f6f2ec;
+$themeColor: #405a75;
+$themeColorLight: #6dabea;
+$offColor: #a87900;
+$offBlack: #3a3a3a;
+$deactivatedGrey: #4e4e4e;
+
+.tt-talent {
+	position: relative;
+	height: 52px;
+	width: 52px;
+	display: block;
+	background: linear-gradient($deactivatedGrey 49%, $offBlack 50%, $deactivatedGrey 95%);
+	border: 1px solid black;
+	padding: 4px;
+
+	&.tt-talent--active {
+		background: linear-gradient($themeColorLight 49%, $offBlack 50%, $themeColorLight 95%);
+		box-shadow: #7d7d7d 0px 0px 8px;
+
+		&:hover {
+			background: linear-gradient($themeColorLight 49%, $offBlack 50%, $themeColorLight 95%);
+		}
+
+		.tt-talent__button {
+			background-position-y: 0px;
+		}
+	}
+    
+    &:hover {
+		background: linear-gradient($offColor 49%, $offBlack 50%, $offColor 95%);
+	}
+	
+	.tt-talent__button::before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient( -45deg, #ffffff00 0 calc(50% - 10px), #F5F5F5 calc(50% - 10px) calc(50% + 10px), #ffffff00 calc(50% + 10px) 100% );
+		background-size: 350% 100%;
+		background-position: 100% 100%;
+	}
+	&:hover, &:focus {
+		.tt-talent__button::before{
+			background-position: 0% 100%;
+			transition: 0.5s all;
+		}
+	}
+}
+
+.tt-talent__button {
+	width: 100%;
+	height: 100%;
+    border: 1px solid black;
+	outline: none;
+	cursor: pointer;
+	background: url("./talent-icons-sprite.png") 0 -50px;
+	
+	&.tt-talent__button--stack {
+		background-position-x: 0;
+	}
+	&.tt-talent__button--snack {
+		background-position-x: -50px;
+	}
+	&.tt-talent__button--cake {
+		background-position-x: -100px;
+	}
+	&.tt-talent__button--crown {
+		background-position-x: -150px;
+	}
+	&.tt-talent__button--boat {
+		background-position-x: -200px;
+	}
+	&.tt-talent__button--diver {
+		background-position-x: -250px;
+	}
+	&.tt-talent__button--lightning {
+		background-position-x: -300px;
+	}
+	&.tt-talent__button--skull {
+		background-position-x: -350px;
+	}
+}
