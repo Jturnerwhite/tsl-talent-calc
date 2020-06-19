@@ -12,8 +12,7 @@ const TalentTreePage = ({ dispatch, talentTree, loading, errors }) => {
     // On Page/Component load:
     useEffect(() => {
         document.title = "TS:Legends - Talent Tree";
-        if(!isInitialized)
-            dispatch(fetchTalentTree());
+        dispatch(fetchTalentTree());
     }, [dispatch]); // ditch redundant updates if dispatch is the same
 
     const updateTree = (talentTree) => {
