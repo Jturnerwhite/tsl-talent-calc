@@ -51,14 +51,11 @@ export const updateTalentTree = talentTree => {
 };
 
 export function fetchTalentTree() {
-    console.log('Fetching Talent Tree . . . ');
     // Not Async but would be in a real scenario
     return dispatch => {
-        console.log('Dispatching GET Talent Tree . . . ');
         dispatch(getTalentTree());
 
         try {
-            console.log('Setting Talent Tree . . . ');
             const data = BaseTalentTree; // this would be where we usually call a service or API for data
             // if not in a seperate service, do data mutation/parsing here before returning.
 

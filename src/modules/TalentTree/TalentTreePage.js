@@ -17,10 +17,10 @@ const TalentTreePage = ({ dispatch, talentTree, loading, errors }) => {
     }, [dispatch]); // ditch redundant updates if dispatch is the same
 
     const updateTree = (talentTree) => {
-        console.log("updateTalentTree:", talentTree);
         //updateTalentTree(talentTree);
         dispatch(updateTalentTree({...talentTree}));
-    }; 
+    };
+
     const renderTree = () => {
         if (loading) 
             return <h2>Loading talent tree...</h2>
@@ -29,7 +29,7 @@ const TalentTreePage = ({ dispatch, talentTree, loading, errors }) => {
         if (isInitialized) {
             return <TalentTree talentTree={talentTree} updateTalentTree={updateTree}/>;
         }
-        console.log(talentTree);
+
         return <h2 style={{color:'white'}}>Unable to display talent tree.</h2>
     }
 
