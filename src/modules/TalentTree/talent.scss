@@ -1,9 +1,11 @@
 $defaultFontColor: #f6f2ec;
 $themeColor: #405a75;
 $themeColorLight: #6dabea;
-$offColor: #a87900;
+$hoverColor: #a87900;
 $offBlack: #3a3a3a;
 $deactivatedGrey: #4e4e4e;
+$shineStripe: #F5F5F5;
+$boxShadow: #7d7d7d;
 
 .tt-talent {
 	position: relative;
@@ -16,21 +18,17 @@ $deactivatedGrey: #4e4e4e;
 
 	&.tt-talent--active {
 		background: linear-gradient($themeColorLight 49%, $offBlack 50%, $themeColorLight 95%);
-		box-shadow: #7d7d7d 0px 0px 8px;
-
-		&:hover {
-			background: linear-gradient($themeColorLight 49%, $offBlack 50%, $themeColorLight 95%);
-		}
+		box-shadow: $boxShadow 0px 0px 8px;
 
 		.tt-talent__button {
 			background-position-y: 0px;
 		}
 	}
-    
-    &:hover {
-		background: linear-gradient($offColor 49%, $offBlack 50%, $offColor 95%);
-	}
 	
+	&:not(.tt-talent--active):hover {
+		background: linear-gradient($hoverColor 49%, $offBlack 50%, $hoverColor 95%);
+	}
+
 	.tt-talent__button::before {
 		content: '';
 		display: block;
@@ -39,14 +37,19 @@ $deactivatedGrey: #4e4e4e;
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient( -45deg, #ffffff00 0 calc(50% - 10px), #F5F5F5 calc(50% - 10px) calc(50% + 10px), #ffffff00 calc(50% + 10px) 100% );
+		background: linear-gradient( -45deg, transparent 0 calc(50% - 10px), $shineStripe calc(50% - 10px) calc(50% + 10px), transparent calc(50% + 10px) 100% );
 		background-size: 350% 100%;
 		background-position: 100% 100%;
 	}
+
 	&:hover, &:focus {
-		.tt-talent__button::before{
-			background-position: 0% 100%;
-			transition: 0.5s all;
+		.tt-talent__button {
+			background-position-y: 0px;
+
+			&::before{
+				background-position: 0% 100%;
+				transition: 0.4s all;
+			}
 		}
 	}
 }

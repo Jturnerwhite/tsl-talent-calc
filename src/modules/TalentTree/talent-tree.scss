@@ -1,9 +1,15 @@
 $defaultFontColor: #f6f2ec;
 $themeColor: #405a75;
 $themeColorLight: #6dabea;
+$themeBlack: #060809;
+$themeGrey: #1a1b1d;
 
-$pathBarColor: #1b1b1ca3;
-$pathBarBorder: #222324;
+$pathBarColor: #1e1e1fa3;
+$pathBarBorder: #212121;
+$pathBarColorActive: #303133a8;
+$pathBarBorderActive: #414142;
+
+$pointContainerColor: #00000066;
 
 $small: 420px;
 $medium: 768px;
@@ -15,12 +21,12 @@ $large: 1024px;
 	min-height: 350px;
 	background: url("./talent-calc-bg.png");
 	background-size: cover;
-	border: 1px solid #161618;
+	border: 1px solid $themeGrey;
 	color: $defaultFontColor;
 	padding: 24px;
-	
+
 	.tt__heading {
-		background-color: #1a1b1d;
+		background-color: $themeGrey;
 		color: $defaultFontColor;
 		display: block;
 		padding: 12px 0px;
@@ -55,8 +61,8 @@ $large: 1024px;
 		
 		&::after {
 			content:'';
-			background-color: #1b1b1ca3;
-			border: 1px solid #222324;
+			background-color: $pathBarColor;
+			border: 1px solid $pathBarBorder;
 			border-top: 0px;
 			border-bottom: 0px;
 			position: absolute;
@@ -73,8 +79,8 @@ $large: 1024px;
 
 		&.tt__leaf--active {
 			&::after {
-				background-color: #303133a8;
-				border-color: #414142;
+				background-color: $pathBarColorActive;
+				border-color: $pathBarBorderActive;
 			}
 		}
 	}
@@ -106,8 +112,8 @@ $large: 1024px;
 	}
 
 	.tt__point-container {
-		background-color: #131314;
-		border: 1px solid #1b1d1d;
+		background-color: $pointContainerColor;
+		border: 1px solid $themeGrey;
 		padding: 8px 18px;
 		width: 100%;
 	}
@@ -167,15 +173,15 @@ $large: 1024px;
 		}	
 
 		.tt__leaf {
-			align-items:center;
-			display:flex;
-			flex-grow:1;
+			align-items: center;
+			display: flex;
+			flex-grow: 3;
 			position: relative;
 			min-height: auto;
 		
 			&::after {
 				content:'';
-				border: 1px solid #222324;
+				border: 1px solid $pathBarBorder;
 				border-left: 0px;
 				border-right: 0px;
 				right: -6px;
@@ -184,6 +190,10 @@ $large: 1024px;
 				bottom: auto;
 				width: auto;
 				height: 14px;
+			}
+
+			&:first-child, &:last-child {
+				flex-grow: 1;
 			}
 		}
 
