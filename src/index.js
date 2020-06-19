@@ -10,7 +10,7 @@ import talentTreeReducer from './modules/TalentTree/talentTreeReducer';
 
 import './base.scss';
 
-// would be useful if additional reducers are needed
+// would be useful if/when additional reducers are needed
 const rootReducer = combineReducers({
     talents: talentTreeReducer
 });

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 
 import TalentTreePage from './modules/TalentTree/TalentTreePage';
 
+// Router established as we would normally need it for additional pages.
 const App = () => {
     return (
         <Router basename="/tsl-talent-calc/">
