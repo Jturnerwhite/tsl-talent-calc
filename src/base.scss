@@ -7,3 +7,8 @@ html, body {
 	overflow: hidden;
 	font-family: 'PT Sans', sans;
 }
+
+section {
+	display: flex;
+	justify-content: center;
+}

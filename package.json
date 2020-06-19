@@ -1,6 +1,6 @@
 {
-    "homepage": "https://jturnerwhite.github.io/tsl-talent-calc/",
-    "name": "tslapp",
+    "homepage": "https://jturnerwhite.github.io/tsl-talent-calc",
+    "name": "tsl-talent-calc",
     "version": "0.1.0",
     "private": true,
     "dependencies": {

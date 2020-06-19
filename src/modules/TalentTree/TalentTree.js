@@ -7,8 +7,8 @@ export class TalentBranch extends Component {
         if (talent.assigned === value)
             return false;
 
-        let priorTalent = this.props.branchData.talents.find(preTal => preTal.id == talent.id - 1);
-        let nextTalent = this.props.branchData.talents.find(preTal => preTal.id == talent.id + 1);
+        let priorTalent = this.props.branchData.talents.find(preTal => preTal.id === talent.id - 1);
+        let nextTalent = this.props.branchData.talents.find(preTal => preTal.id === talent.id + 1);
 
         if (!talent.assigned) {
             // First talent is always able to be toggled on

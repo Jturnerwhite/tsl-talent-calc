@@ -8,6 +8,7 @@ import './talent-tree.scss';
 
 const TalentTreePage = ({ dispatch, talentTree, loading, errors }) => {
     const isInitialized = talentTree && talentTree.branches && talentTree.branches.length > 0;
+
     // On Page/Component load:
     useEffect(() => {
         document.title = "TS:Legends - Talent Tree";
