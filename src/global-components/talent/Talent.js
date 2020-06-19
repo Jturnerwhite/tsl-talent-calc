@@ -27,4 +27,4 @@ export const Talent = props => {
             <button className={buttonClasses} onClick={() => {toggleTalent(props.talentData, true);}} onContextMenu={contextMenu}/>
         </div>
     );
-}
+};

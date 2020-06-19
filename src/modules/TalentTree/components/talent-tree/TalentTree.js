@@ -68,7 +68,7 @@ export class TalentTree extends Component {
             </div>
         );
     }
-}
+};
 
 /**
  * TalentBranch Component
@@ -141,4 +141,4 @@ export class TalentBranch extends Component {
             return <h1>There was an error loading Talent Tree Branches</h1>;
         }
     }
-}
+};

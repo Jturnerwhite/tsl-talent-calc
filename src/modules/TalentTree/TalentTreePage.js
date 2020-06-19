@@ -64,6 +64,6 @@ const mapStateToProps = state => {
         talentTree: state.talents.talentTree,
         errors: state.talents.errors,
     };
-}
+};
 
 export default connect(mapStateToProps)(TalentTreePage);
