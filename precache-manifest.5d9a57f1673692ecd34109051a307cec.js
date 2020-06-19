@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "59163a0306d04218d1a18f67ec9cf81c",
+    "revision": "fa8d1d0893fa023975fef65dcc044cfe",
     "url": "/tsl-talent-calc/index.html"
   },
   {
-    "revision": "a9d5262279f2a5dde35e",
-    "url": "/tsl-talent-calc/static/css/main.64507339.chunk.css"
+    "revision": "c1a79e501253f1a293de",
+    "url": "/tsl-talent-calc/static/css/main.51ea6549.chunk.css"
   },
   {
-    "revision": "7e55a1dac273100d8eb3",
-    "url": "/tsl-talent-calc/static/js/2.878d6dc4.chunk.js"
+    "revision": "9ac5a3384d3565f9ee22",
+    "url": "/tsl-talent-calc/static/js/2.06422c1d.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/tsl-talent-calc/static/js/2.878d6dc4.chunk.js.LICENSE.txt"
+    "url": "/tsl-talent-calc/static/js/2.06422c1d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a9d5262279f2a5dde35e",
-    "url": "/tsl-talent-calc/static/js/main.113f7338.chunk.js"
+    "revision": "c1a79e501253f1a293de",
+    "url": "/tsl-talent-calc/static/js/main.a4b2acc8.chunk.js"
   },
   {
     "revision": "fa00eb4208ee7a43824b",

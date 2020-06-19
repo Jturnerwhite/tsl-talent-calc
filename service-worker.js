@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/tsl-talent-calc/precache-manifest.f00c499f9d91e2ce95827a0520826102.js"
+  "/tsl-talent-calc/precache-manifest.5d9a57f1673692ecd34109051a307cec.js"
 );
 
 self.addEventListener('message', (event) => {
