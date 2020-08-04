@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 
 import { Talent } from '../../../../global-components/talent/Talent';
 
@@ -10,6 +11,10 @@ import './talent-tree.scss';
  * Renders TalentBranch components and point display.
  */
 export class TalentTree extends Component {
+    constructor(props) {
+        super(props);
+        this.talentTree = _.cloneDeep(props.talentTree);
+    }
 
     /**
      * Passes up the change to the talent tree to the parent component through a provided function property.
@@ -17,7 +22,7 @@ export class TalentTree extends Component {
      * @returns {undefined}
      */
     updateTree = () => {
-        this.props.updateTalentTree(this.props.talentTree);
+        this.props.updateTalentTree(this.talentTree);
     }
 
     /**
@@ -27,7 +32,7 @@ export class TalentTree extends Component {
      * @returns {boolean} True if the talent can be toggled, otherwise false.
      */
     canToggleTalent = talent => {
-        return talent.assigned || (talent.cost <= this.props.talentTree.points);
+        return talent.assigned || (talent.cost <= this.talentTree.points);
     }
  
     /**
@@ -37,15 +42,38 @@ export class TalentTree extends Component {
      * @returns {undefined}
      */
     toggleTalent = talent => {
-        if (this.canToggleTalent(talent)) {
-            this.props.talentTree.points += talent.assigned ? talent.cost : -talent.cost;
-            talent.assigned = !talent.assigned;
-            this.updateTree();
+        let matchingTalent = this.getTalent(talent.id);
+        if (!this.canToggleTalent(talent) || !matchingTalent) {
+            return;
+        }
+
+        this.talentTree.points += talent.assigned ? talent.cost : -talent.cost;
+        matchingTalent.assigned = !matchingTalent.assigned;
+        
+        this.updateTree();
+    }
+
+    /**
+     * Grab find a talent in the talent tree
+     * @param {Number} id The id of the talent to find
+     * @returns {Object} the 'real' talent object
+     */
+    getTalent = talentId => {
+        let branches = this.talentTree.branches;
+
+        // For instead of forEach so we can exit early
+        for (let i = 0; i < branches.length; i++) {
+            let branch = branches[i];
+            let matchingTalent = branch.talents.find(tal => { return talentId === tal.id });
+
+            if (matchingTalent) {
+                return matchingTalent;
+            }
         }
     }
 
     render() {
-        const { branches, points, pointsMax } = this.props.talentTree;
+        const { branches, points, pointsMax } = this.talentTree;
 
         const talentBranches = branches.map((branch, index) => {
             return <TalentBranch key={index} branchData={branch} toggleTalent={this.toggleTalent}/>
@@ -61,7 +89,7 @@ export class TalentTree extends Component {
                     <div className="tt__col">
                         <div className="tt__point-container">
                             <label className="tt__text tt__text">{points} / {pointsMax}</label>
-                            <label className="tt__text tt__text--theme-color">Points Spent</label>
+                            <label className="tt__text tt__text--theme-color">Points Left</label>
                         </div>
                     </div>
                 </div>
