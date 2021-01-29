@@ -3,6 +3,7 @@ Coding Challenge Application
 
 ![ExampleImage](https://raw.githubusercontent.com/DnDBeyond/front-end-developer-challenge/master/assets/example.png)
 Original Reference
+(https://github.com/DnDBeyond/front-end-developer-challenge)
 
 ## Assumptions
 - "Assigning one talent should highlight the path to the next talent"  This was iffy for me because both "path bars" for Branch 1 and Branch 2 were "lit" in the example image, despite each branch having differing states.
