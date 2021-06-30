@@ -1,9 +1,14 @@
 # tsl-talent-calc 
 Coding Challenge Application
 
+## Basis:
+I was tasked with replicating this gamelike skill tree system from the following image:
 ![ExampleImage](https://raw.githubusercontent.com/DnDBeyond/front-end-developer-challenge/master/assets/example.png)
 Original Reference
 (https://github.com/DnDBeyond/front-end-developer-challenge)
+
+No real detail was provided that would establish any hidden functionality, and I was to infer anything I needed to in order to progress.
+The work was done over two days, with a fix to some functionality some days later after feedback from the interview.
 
 ## Assumptions
 - "Assigning one talent should highlight the path to the next talent"  This was iffy for me because both "path bars" for Branch 1 and Branch 2 were "lit" in the example image, despite each branch having differing states.
